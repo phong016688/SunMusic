@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), MainContract.Vie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        presenter = MainPresenter(AlbumRepositoryImpl.instance)
+        presenter = MainPresenter(this)
         setSupportActionBar(toolbar)
         setupFragment()
     }
